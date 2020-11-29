@@ -3,10 +3,7 @@
 // convenience to get you started writing code faster.
 //
 const COLORS = ['black','brown','red','orange','yellow','green','blue','violet','grey','white' ];
-const decodeColors = (colors) =>  parseInt(colors.map((color) => COLORS.indexOf(color)).join(''));
+const decodeColor = (color) =>  String(COLORS.indexOf(color));
+export const decodedValue = ([color1, color2]) =>  decodeColor(color1) + decodeColor(color2);
 
-export const decodedValue = (args) => {
-    let [color1, color2] = args;
-    return decodeColors([color1, color2]);
-};
 
